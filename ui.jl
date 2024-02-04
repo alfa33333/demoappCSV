@@ -1,5 +1,33 @@
 heading("CSV Analysis")
  row([
+    cell( 
+        [
+        textfield("Provide your name:", :text1),
+        p("The lenght of Characters random numbers is {{lengthWords}}")
+        ])
+    cell( 
+        [
+        textfield("Provide some number:", :text2),
+        p("The lenght of Characters random numbers is {{lengthWords2}}")
+        ])
+    cell( 
+        [
+            Stipple.select(:Select_fruit, options = :Select_fruit_list, label = "Select Fruits")
+        ])
+ ])
+
+ row(
+    [
+        btn("Send", var"icon-right" = "send", color = "secondary", class = "q-mr-sm", @click(:Button_process))
+    ]
+ )
+
+
+ row([
+    cell(class="col-md-12", 
+          [
+          h1("Data Analysis")
+          ])
       cell(class="col-md-12", 
           [
           uploader( multiple = true,
